@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="carro-form">
+        <form class="carro-form" @submit="createCarro">
             <div class="mb-3">
                 <label class="form-label">Nome:</label>
                 <input type="text" class="form-control" style="width: 300px;" id="nome" v-model="nome"
@@ -35,7 +35,55 @@
 <script>
 
 export default {
-    name: "CarroForm"
+    name: "CarroForm",
+
+
+    data() {
+        return {
+            nome: null,
+            nomeCarro: null,
+            horario: null,
+            placaCarro: null,
+            msg: null
+
+
+        }
+    },
+
+    methods: {
+        async createCarro(e) {
+            e.preventDefault();
+            console.log("Carro cadastrado com sucesso!")
+            const data = {
+                nome: this.nome,
+                nomeCarro: this.nomeCarro,
+                horario: this.horario,
+                placaCarro: this.placaCarro,
+                status: "Solicitado",
+
+            }
+
+            const dataJson = JSON.stringify(data);
+            //post
+            const req = await fetch("http://localhost:3000/carros", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: dataJson
+            });
+
+            const res = await req.json();
+
+            console.log(res);
+
+            this.nome = ""
+            this.nomeCarro=""
+            this.horario=""
+            this.placaCarro=""
+        }
+    }
+
 }
 </script>
 
@@ -44,9 +92,7 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
 
 }
-
-
 </style>
