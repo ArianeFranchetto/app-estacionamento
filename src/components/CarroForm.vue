@@ -1,5 +1,9 @@
 <template>
     <div>
+        <Mensagem :msg="msg" v-show="msg" />
+    </div>
+
+    <div>
         <form class="carro-form" @submit="createCarro">
             <div class="mb-3">
                 <label class="form-label">Nome:</label>
@@ -21,7 +25,7 @@
                     placeholder="Informe a placa">
             </div>
 
-            <div class="form-text">Coloque todas as letras números.</div>
+            <div class="form-text">Coloque todas as letras e números.</div>
 
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="concordoEmCompartilhar">
@@ -33,9 +37,15 @@
 </template>
 
 <script>
+import Mensagem from './Mensagem.vue';
+
 
 export default {
     name: "CarroForm",
+
+    components: {
+        Mensagem
+    },
 
 
     data() {
@@ -77,10 +87,16 @@ export default {
 
             console.log(res);
 
+            this.msg = `Carro cadastrado com sucesso!`;
+
+            setTimeout (() => this.msg = "",3000 )
+          
+
             this.nome = ""
-            this.nomeCarro=""
-            this.horario=""
-            this.placaCarro=""
+            this.nomeCarro = ""
+            this.horario = ""
+            this.placaCarro = ""
+            
         }
     }
 

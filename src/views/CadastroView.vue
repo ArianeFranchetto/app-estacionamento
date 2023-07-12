@@ -1,5 +1,18 @@
 <template>
   <div>
-    <h1>This is an about page</h1>
+    <DashBoard/>
   </div>
 </template>
+<script>
+import DashBoard from '@/components/DashBoard.vue';
+
+export default {
+  name: 'CadastroView',
+
+  components: {
+    DashBoard
+  }
+ 
+}
+
+</script>

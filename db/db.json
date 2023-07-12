@@ -10,29 +10,6 @@
     }
   ],
   "carros": [
-    {
-      "nome": "teste",
-      "nomeCarro": "teste",
-      "horario": "teste",
-      "placaCarro": "teste",
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "teste",
-      "nomeCarro": "teste",
-      "horario": "teste",
-      "placaCarro": "teste",
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "nome",
-      "nomeCarro": "nom",
-      "horario": "nome",
-      "placaCarro": "nome",
-      "status": "Solicitado",
-      "id": 3
-    }
+   
   ]
 }

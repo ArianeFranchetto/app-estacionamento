@@ -9,10 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page"><router-link to="/">Inicio</router-link> </a>
+          <a class="nav-link active" aria-current="page"><router-link to="/">Cadastro</router-link> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><router-link to="/cadastro">Cadastro</router-link></a>
+          <a class="nav-link"><router-link to="/cadastro">Carros Cadastrados</router-link></a>
         </li>
       
         <li>

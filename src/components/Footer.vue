@@ -17,7 +17,7 @@ export default {
 
 <style> .footer {
      background-color: aqua;
-     position: absolute;
+     position: fixed;
      bottom: 0;
      width: 100%;
      height: 2.8rem;
