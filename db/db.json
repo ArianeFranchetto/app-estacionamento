@@ -10,6 +10,21 @@
     }
   ],
   "carros": [
-   
+    {
+      "nome": "Ariane",
+      "nomeCarro": "Corsa",
+      "horario": "8h",
+      "placaCarro": "AXH123",
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Caio",
+      "nomeCarro": "HB20",
+      "horario": "9h",
+      "placaCarro": "ABF123",
+      "status": "Solicitado",
+      "id": 2
+    }
   ]
 }
